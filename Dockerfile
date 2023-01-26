@@ -4,7 +4,7 @@ FROM alpine:latest
 
 
 # install php curl wget git vim unzip zip dan jangan lupa seluruh extension php
-RUN apk update && apk add curl wget vim unzip zip php php-fpm
+RUN apk update && apk add curl wget vim unzip zip php php-fpm nginx
 
 RUN php -v
 
@@ -20,4 +20,4 @@ COPY ./port /var/www/html
 RUN chmod -R 777 /var/www/html
 
 # start nginx   
-CMD [ "nginx", "-g", "daemon off;" ]
+CMD ["nginx", "-g", "daemon off;"]
