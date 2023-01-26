@@ -19,5 +19,7 @@ COPY ./port /var/www/html
 
 RUN chmod -R 777 /var/www/html
 
+RUN echo $PORT
+
 # start nginx   
 CMD ["nginx", "-g", "daemon off;"]
