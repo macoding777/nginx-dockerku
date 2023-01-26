@@ -4,7 +4,9 @@ FROM alpine:latest
 
 
 # install php curl wget git vim unzip zip dan jangan lupa seluruh extension php
-RUN apk update && apk add curl wget vim unzip zip php8.1 php8.1-fpm nginx
+RUN apk update && apk add curl wget vim unzip zip php php-fpm
+
+RUN php -v
 
 RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && echo "Asia/Jakarta" > /etc/timezone
 
