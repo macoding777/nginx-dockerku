@@ -23,7 +23,7 @@ RUN echo $PORT
 
 
 # start php -S localhost:8080 -t /var/www/html
-CMD ["php", "-S", "localhost:8080", "-t", "/var/www/html"]
+CMD ["php", "-S", "0.0.0.0:8080", "-t", "/var/www/html"]
 
 # start nginx   
 # CMD ["nginx", "-g", "daemon off;"]
