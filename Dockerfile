@@ -16,3 +16,6 @@ COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./port /var/www/html
 
 RUN chmod -R 777 /var/www/html
+
+# start nginx   
+CMD [ "nginx", "-g", "daemon off;" ]
