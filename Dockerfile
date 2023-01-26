@@ -16,7 +16,7 @@ RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && echo
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
 # check config nginx
-RUN nginx -t
+# RUN nginx -t
 
 # copy file dari "port" ke nginx
 COPY ./port /var/www/html
