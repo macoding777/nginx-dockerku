@@ -11,7 +11,7 @@ RUN php -v
 RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Jakarta /etc/localtime && echo "Asia/Jakarta" > /etc/timezone
 
 # copy file config nginx
-COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx.conf /etc/nginx/sites-available/us.alfine.me
 
 
 # copy file dari "port" ke nginx
